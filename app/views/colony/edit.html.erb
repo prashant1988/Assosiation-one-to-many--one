@@ -1,0 +1,14 @@
+<h1>Editing</h1>
+
+<%= form_for @col do |col|%>
+    <b>Name:</b>
+    <%=col.text_field:name%>
+    <br/>
+    <b>City:</b>
+    <%=col.text_field:city%>
+    <br/>
+
+    <%= col.submit%>
+
+
+<%end%>

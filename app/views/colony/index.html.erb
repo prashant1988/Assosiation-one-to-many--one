@@ -1,0 +1,27 @@
+<h1> Listing</h1>
+
+<table border="1" align="center">
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Houses</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+    
+  <%@col.each do |col| %>
+   <tr>
+      <td><%=col.name%>
+      <td><%=col.city%>
+      <td><%=link_to 'houses',:controller=>'house',:action=>'create',:id=>col.id %></td>
+      <td><%= link_to 'details',col%>
+      <td><%= link_to 'Edit',edit_colony_path(col)%>
+      <td><%= link_to 'destroy',col,:confirm=>'Are you sure?',method: :delete%>
+
+
+   <%end  %>
+ </table>
+
+<%= link_to 'new entry', new_colony_path%> <br/>
+ <%#= link_to 'house_index', house_index_path%>

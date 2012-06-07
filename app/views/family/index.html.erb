@@ -1,0 +1,26 @@
+<h1>Listing</h1>
+
+
+<table border="1" align="center">
+  <tr>
+    <th>Members</th>
+    <th>Salary</th>
+    <th>Cast</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% if @fml  %>
+      <tr>
+        <td><%=@fml.members  %> </td>
+        <td><%=@fml.salary  %> </td>
+        <td><%=@fml.cast  %> </td>
+        <td><%=link_to 'show',@fml  %> </td>
+        <td><%=link_to 'edit', edit_family_path(@fml)  %> </td>
+        <td><%=link_to 'destroy',@fml,:confirm=>'Are you sure?',method: :destroy  %> </td>
+      </tr>
+  <% end %>
+</table>
+
+<%= link_to 'new',:controller=>'family',:action=>'new',:id=>@flt.id%> <br/>
+<%= link_to 'colony_index', colony_index_path%>

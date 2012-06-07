@@ -1,0 +1,11 @@
+<h1>edit </h1>
+
+<%= form_for @hou do |house|%>
+<b>House-Name:</b>
+<%= house.text_field :h_name%>
+<br/>
+
+ <b>House-No.</b>
+<%=house.text_field :h_no%><br/>
+<%= house.submit%>
+<%end%>

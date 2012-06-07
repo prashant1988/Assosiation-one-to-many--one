@@ -1,0 +1,11 @@
+<h1>edit </h1>
+
+<%= form_for @flt do |flat|%>
+    <b>Flat-room:</b>
+    <%= flat.text_field :rooms%>
+    <br/>
+
+    <b>Flat-colour.</b>
+    <%=flat.text_field :colour%><br/>
+    <%= flat.submit%>
+<%end%>

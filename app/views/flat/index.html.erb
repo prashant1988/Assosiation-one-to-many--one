@@ -1,0 +1,28 @@
+<h1>Listing</h1>
+
+
+<table border="1" align="center">
+  <tr>
+     <th>Color</th>
+     <th>Rooms</th>
+     <th>Family</th>
+     <th></th>
+     <th></th>
+     <th></th>
+  </tr>
+ <% @flt.each do |flat|  %>
+  <tr>
+      <td><%=flat.colour  %> </td>
+      <td><%=flat.rooms  %> </td>
+      <td><%=link_to'families',:controller=>'family',:action=>'index',:id=>flat.id %></td>
+      <td><%=link_to 'show',flat  %> </td>
+      <td><%=link_to 'edit', edit_flat_path(flat)  %> </td>
+      <td><%=link_to 'destroy',flat,:confirm=>'Are you sure?',method: :delete %> </td>
+
+  </tr>  
+  <% end %>
+</table>
+
+<%= link_to 'new',:controller=>'flat',:action=>'new',:id=>@hou.id%> <br/>
+<%= link_to 'colony_index', colony_index_path%>
+        

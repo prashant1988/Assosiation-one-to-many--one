@@ -1,0 +1,16 @@
+<h1>Entry</h1>
+
+
+<%= form_for @col,:url=>{:action=>'create'} do |col| %>
+
+  <b>Name:</b>
+    <%=col.text_field:name%>
+     <br/>
+   <b>City:</b>
+    <%=col.text_field:city%>
+    <br/>
+    
+    <%= col.submit%>
+
+
+<%end%>
