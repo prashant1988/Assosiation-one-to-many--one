@@ -1,4 +1,4 @@
-class HouseController < ApplicationController
+  class HouseController < ApplicationController
 
   def index
     @col=Colony.find(params[:id])

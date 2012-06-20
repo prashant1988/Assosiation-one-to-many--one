@@ -1,0 +1,12 @@
+%h1 New
+= form_for (@flt),:url=>{:action=>'create',:id=>@hou.id} do |flat|
+   %b No of rooms:
+   = flat.text_field :rooms
+   %br/
+   %b Flat-color.
+   =flat.text_field :colour
+   %br/
+   = flat.submit
+
+
+= link_to 'house_index', house_index_path

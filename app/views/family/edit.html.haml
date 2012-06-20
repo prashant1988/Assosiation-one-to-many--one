@@ -1,0 +1,21 @@
+%h1 edit
+= form_for @fml do |fml|
+  %b Members
+  = fml.text_field :members
+  %br/
+  %b Cast
+  = fml.select(:cast,["Hindu","Muslim","Sikh","Christians"],:prompt=>'select',:class=>'space-button quote_request_form')
+  %br/
+  .field
+    %b= fml.label :Family_Income
+    %br/
+    = fml.radio_button :salary, "low"
+    10000 to 20000
+    %br/
+    = fml.radio_button :salary, "medium"
+    21000 to 30000
+    %br/
+    = fml.radio_button :salary, "high"
+    Above 300000
+  = fml.submit
+

@@ -11,7 +11,7 @@ class FamilyController < ApplicationController
 
       @fml=@flt.build_family
     end
-
+    #:flat_id=>@fml.flat_id
     def create
       @flt=Flat.find(params[:flat_id])
       @fml=@flt.build_family(params[:family])
@@ -24,8 +24,8 @@ class FamilyController < ApplicationController
     end
 
     def edit
-      @flt=Flat.find(params[:id])
-      @fml=@flt.family
+
+      @fml=Family.find(params[:id])
     end
 
     def update
@@ -44,8 +44,10 @@ class FamilyController < ApplicationController
     end
 
     def  destroy
-      @flt=Flat.find(params[:id])
-      @fml=@flt.family
+      #@flt=Flat.find(params[:id])
+      #@fml=@flt.family
+      @fml=Family.find(params[:id])
+      @flt=@fml.flat
       if @fml.delete
         redirect_to :action=>'index', :id=>@flt.id
       end

@@ -1,0 +1,9 @@
+%h1 Editing
+= form_for @col do |col|
+  %b Name:
+  = col.text_field:name
+  %br/
+  %b City:
+  =col.text_field:city
+  %br/
+  = col.submit

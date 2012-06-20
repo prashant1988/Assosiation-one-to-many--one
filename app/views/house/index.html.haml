@@ -1,0 +1,24 @@
+%h1 House_Listing
+
+%table{:align=> "center", :border=> "1"}
+  %tr
+    %th House_name
+    %th House_no.
+    %th Associate
+    %th
+    %th
+    %th
+
+  - @hou.each do |house|
+    %tr
+      %td= house.h_name
+      %td= house.h_no
+      %td= link_to 'flats', :controller=>'flat',:action=>'index',:id=>house.id
+      %td= link_to image_tag("Show.png",:width=>20), house
+      %td= link_to image_tag("update.png",:width=>20), edit_house_path(house)
+      %td= link_to image_tag("Delete-icon.png",:width=>20),house,:confirm=>'Are you sure?',method: :delete
+
+
+= link_to'new',:controller=>'house',:action=>'new',:id=>@col.id
+%br/
+= link_to 'colony_index',colony_index_path
