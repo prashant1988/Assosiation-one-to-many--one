@@ -4,9 +4,9 @@
     %th Members
     %th Salary
     %th Cast
-    %th
-    %th
-    %th
+    %th Show
+    %th Update
+
   - if @fml
     %tr
       %td
@@ -19,8 +19,6 @@
         =link_to image_tag("Show.png",:width=>20),@fml
       %td
         =link_to image_tag("update.png", :width=>20),edit_family_path(@fml)
-      %td
-        =link_to image_tag("Delete-icon.png",:width=>20),@fml,:confirm=>'Are you sure?',method: :delete
 = link_to 'new',:controller=>'family',:action=>'new',:id=>@flt.id
 %br/
 = link_to 'colony_index', colony_index_path

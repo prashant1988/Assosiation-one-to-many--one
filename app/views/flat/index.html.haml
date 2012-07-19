@@ -6,9 +6,9 @@
     %th Color
     %th Rooms
     %th Associate
-    %th
-    %th
-    %th
+    %th Show
+    %th  Update
+
 
   - @flt.each do |flat|
     %tr
@@ -22,8 +22,6 @@
         =link_to image_tag("Show.png",:width=>20),flat
       %td
         =link_to  image_tag("update.png", :width=>20), edit_flat_path(flat)
-      %td
-        =link_to image_tag("Delete-icon.png",:width=>20),flat,:confirm=>'Are you sure?',method: :delete
 
 = link_to 'new',:controller=>'flat',:action=>'new',:id=>@hou.id
 = link_to 'colony_index', colony_index_path
