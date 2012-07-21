@@ -17,6 +17,7 @@
     if @hou.save
       redirect_to :action=>'index', :id=>@col.id
     else
+      flash[:notice]='please fill correctly, h_no integer  '
       render 'new'
     end
   end
@@ -30,11 +31,10 @@
   def update
     @hou=House.find(params[:id])
     @col=@hou.colony
-    puts 'hii'
-    puts @col.inspect
     if @hou.update_attributes(params[:house])
       redirect_to :action=>'index', :id=>@col.id
     else
+      flash[:notice]='please fill in H-NO integer'
       render 'edit'
     end
   end
