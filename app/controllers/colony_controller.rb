@@ -13,6 +13,7 @@ class ColonyController < ApplicationController
 
     if @col.save
       redirect_to :action=>'index'
+      flash[:notice] = "New Colony created"
     else
       render 'new'
     end

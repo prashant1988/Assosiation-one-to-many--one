@@ -21,6 +21,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem "email_spec"
+end
+
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
